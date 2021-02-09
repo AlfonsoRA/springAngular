@@ -1,0 +1,28 @@
+<div class = "container marginTop">
+    <h2>Lista De Clientes</h2>
+    <div class="my-2 text-left">
+        <button class="btn btn-rounded btn-success" type="button" [routerLink] = "['/form']"> 
+                Crear cliente
+        </button>
+    </div><br>
+    <table class="table">
+        <thead class="table-dark">
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Apellido</th>
+            <th scope="col">Fecha</th>
+            <th scope="col">Email</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor = "let cliente of listaClientes">
+            <th scope="row">{{cliente.id}}</th>
+            <td>{{cliente.nombre}}</td>
+            <td>{{cliente.apellido}}</td>
+            <td>{{cliente.fecha}}</td>
+            <td>{{cliente.email}}</td>
+        </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,7 @@
+footer{
+    /*Para poner el footer al final*/
+    position: absolute;
+    bottom: -90px;
+    height: 60px;
+    width: 100%;
+}

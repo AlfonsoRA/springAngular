@@ -1,0 +1,11 @@
+<div class = "container marginTop">
+    <div class = "card" style="width: 18rem;">
+        <div class = "card-header">
+        Lista De Cursos
+        </div>
+        <ul class = "list-group list-group-flush" *ngIf = "flat == true">
+        <li class = "list-group-item" *ngFor = "let lenguaje of listaCursos">{{lenguaje}}</li>
+        </ul>
+     </div> <br>
+     <button type = "button" class = "btn btn-primary" (click) = "mostrarOcultar()">{{flat == true ? "Ocultar" : "Mostrar"}}</button>
+</div>
