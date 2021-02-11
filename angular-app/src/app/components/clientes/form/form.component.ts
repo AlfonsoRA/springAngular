@@ -1,8 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from "@angular/router";
+import { Router, ActivatedRoute } from "@angular/router";
 import swal from 'sweetalert2'
 import { ClienteService } from "../cliente.service";
 import { Cliente } from "../cliente";
+import { asLiteral } from '@angular/compiler/src/render3/view/util';
+import { leadingComment } from '@angular/compiler';
+import { createCipher } from 'crypto';
 
 @Component({
   selector: 'app-form',
@@ -14,7 +17,7 @@ export class FormComponent implements OnInit {
   public cliente: Cliente = new Cliente();
   public titulo: String = "Crear Cliente"
 
-  constructor(private clienteService: ClienteService, private router: Router) { }
+  constructor(private clienteService: ClienteService, private router: Router, private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
   }
@@ -28,5 +31,11 @@ export class FormComponent implements OnInit {
       }
     )
   };
+
+  public cargarCliente(): void{
+    this.activatedRoute.params.subscribe(
+
+    )
+  }
 
 }
